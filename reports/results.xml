@@ -1,94 +1,148 @@
-<testsuites id="" name="" tests="36" failures="0" skipped="0" errors="0" time="22.914287">
-<testsuite name="api\auth.spec.ts" timestamp="2026-11-01T06:50:14.781Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.519" errors="0">
-<testcase name="FakeStore Authentication API Tests › POST - Login with valid credentials @master @sanity @api" classname="api\auth.spec.ts" time="4.437">
+<testsuites id="" name="" tests="12" failures="2" skipped="0" errors="0" time="34.734694000000005">
+<testsuite name="web\opencart.spec.ts" timestamp="2026-11-02T11:33:41.911Z" hostname="chromium" tests="12" failures="2" skipped="0" time="84.187" errors="0">
+<testcase name="Customer registration succeeds @master @sanity @regression @web" classname="web\opencart.spec.ts" time="10.85">
+<system-out>
+<![CDATA[✅ Customer registration completed.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Authentication API Tests › POST - Login with invalid credentials @master @regression @api" classname="api\auth.spec.ts" time="1.082">
+<testcase name="Valid customer login reaches My Account @master @sanity @regression @web" classname="web\opencart.spec.ts" time="11.015">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBeTruthy()" type="expect.toBeTruthy">
+<![CDATA[  [chromium] › web\opencart.spec.ts:58:5 › Valid customer login reaches My Account @master @sanity @regression @web › 2) Log in with configured customer credentials 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      71 |   await test.step('2) Log in with configured customer credentials', async () => {
+      72 |     await loginPage.login(email, password);
+    > 73 |     await expect.poll(() => accountPage.isAccountPageExists()).toBeTruthy();
+         |                                                                ^
+      74 |   });
+      75 |
+      76 |   console.log('✅ Customer login completed.');
+        at C:\Playwright_opencart_AI\tests\web\opencart.spec.ts:73:64
+        at C:\Playwright_opencart_AI\tests\web\opencart.spec.ts:71:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\web-opencart-Valid-custome-73a71-aster-sanity-regression-web-chromium\error-context.md
+]]>
+</failure>
 </testcase>
-</testsuite>
-<testsuite name="api\carts.spec.ts" timestamp="2026-11-01T06:50:14.781Z" hostname="chromium" tests="12" failures="0" skipped="0" time="6.759" errors="0">
-<testcase name="FakeStore Carts API Tests › GET - All carts @master @sanity @api" classname="api\carts.spec.ts" time="0.34">
+<testcase name="Invalid customer login is rejected @master @sanity @regression @web" classname="web\opencart.spec.ts" time="6.801">
+<system-out>
+<![CDATA[✅ Invalid customer login was rejected.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Cart by ID @master @sanity @api" classname="api\carts.spec.ts" time="0.914">
+<testcase name="Customer logout removes authenticated navigation @master @sanity @regression @web" classname="web\opencart.spec.ts" time="14.492">
+<system-out>
+<![CDATA[✅ Customer logout completed.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Carts by date range @master @regression @api" classname="api\carts.spec.ts" time="0.339">
+<testcase name="Product search displays the matching product @master @sanity @regression @web" classname="web\opencart.spec.ts" time="1.552">
+<system-out>
+<![CDATA[✅ Product search completed.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Carts for a user @master @regression @api" classname="api\carts.spec.ts" time="0.88">
+<testcase name="Product can be added to the cart with the requested quantity @master @sanity @regression @web" classname="web\opencart.spec.ts" time="4.427">
+<system-out>
+<![CDATA[✅ Product was added to the cart.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Carts with limit @master @regression @api" classname="api\carts.spec.ts" time="0.339">
+<testcase name="End-to-end customer shopping journey @master @regression @end-to-end @web" classname="web\opencart.spec.ts" time="12.293">
+<system-out>
+<![CDATA[✅ End-to-end customer shopping journey completed.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Carts sorted asc @master @regression @api" classname="api\carts.spec.ts" time="0.558">
+<testcase name="Valid login (success) row 1 @master @regression @datadriven @web" classname="web\opencart.spec.ts" time="8.408">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBeTruthy()" type="expect.toBeTruthy">
+<![CDATA[  [chromium] › web\opencart.spec.ts:246:7 › Valid login (success) row 1 @master @regression @datadriven @web › 3) Validate the result against the data row 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      264 |     await test.step('3) Validate the result against the data row', async () => {
+      265 |       if (row.expected === 'success') {
+    > 266 |         await expect.poll(() => accountPage.isAccountPageExists()).toBeTruthy();
+          |                                                                    ^
+      267 |       } else {
+      268 |         await expect
+      269 |           .poll(() => loginPage.getWarningText())
+        at C:\Playwright_opencart_AI\tests\web\opencart.spec.ts:266:68
+        at C:\Playwright_opencart_AI\tests\web\opencart.spec.ts:264:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\web-opencart-Valid-login-s-c9ad1-r-regression-datadriven-web-chromium\error-context.md
+]]>
+</failure>
 </testcase>
-<testcase name="FakeStore Carts API Tests › GET - Carts sorted desc @master @regression @api" classname="api\carts.spec.ts" time="0.325">
+<testcase name="Invalid login (failure) row 2 @master @regression @datadriven @web" classname="web\opencart.spec.ts" time="2.996">
+<system-out>
+<![CDATA[✅ Data-driven login scenario completed: Invalid login.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › POST - Create cart @master @regression @api" classname="api\carts.spec.ts" time="0.233">
+<testcase name="Invalid login (failure) row 3 @master @regression @datadriven @web" classname="web\opencart.spec.ts" time="2.989">
+<system-out>
+<![CDATA[✅ Data-driven login scenario completed: Invalid login.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › PUT - Update cart @master @regression @api" classname="api\carts.spec.ts" time="0.235">
+<testcase name="Invalid login (failure) row 4 @master @regression @datadriven @web" classname="web\opencart.spec.ts" time="4.26">
+<system-out>
+<![CDATA[✅ Data-driven login scenario completed: Invalid login.
+]]>
+</system-out>
 </testcase>
-<testcase name="FakeStore Carts API Tests › DELETE - Cart @master @regression @api" classname="api\carts.spec.ts" time="0.892">
-</testcase>
-<testcase name="FakeStore Carts API Tests › GET - Cart response schema @master @regression @api" classname="api\carts.spec.ts" time="0.971">
-</testcase>
-<testcase name="FakeStore Carts API Tests › Cart CRUD workflow @master @regression @api › POST, PUT, DELETE - Cart workflow @master @regression @api" classname="api\carts.spec.ts" time="0.733">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-</testcase>
-</testsuite>
-<testsuite name="api\products.spec.ts" timestamp="2026-11-01T06:50:14.781Z" hostname="chromium" tests="12" failures="0" skipped="0" time="3.331" errors="0">
-<testcase name="FakeStore Products API Tests › GET - All products @master @sanity @api" classname="api\products.spec.ts" time="0.278">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Product by ID @master @sanity @api" classname="api\products.spec.ts" time="0.231">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Products with limit @master @regression @api" classname="api\products.spec.ts" time="0.228">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Products sorted asc @master @regression @api" classname="api\products.spec.ts" time="0.249">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Products sorted desc @master @regression @api" classname="api\products.spec.ts" time="0.259">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - All product categories @master @sanity @api" classname="api\products.spec.ts" time="0.232">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Products by category @master @regression @api" classname="api\products.spec.ts" time="0.239">
-</testcase>
-<testcase name="FakeStore Products API Tests › POST - Create product @master @regression @api" classname="api\products.spec.ts" time="0.252">
-</testcase>
-<testcase name="FakeStore Products API Tests › PUT - Update product @master @regression @api" classname="api\products.spec.ts" time="0.248">
-</testcase>
-<testcase name="FakeStore Products API Tests › DELETE - Product @master @regression @api" classname="api\products.spec.ts" time="0.227">
-</testcase>
-<testcase name="FakeStore Products API Tests › GET - Product response schema @master @regression @api" classname="api\products.spec.ts" time="0.266">
-</testcase>
-<testcase name="FakeStore Products API Tests › Product CRUD workflow @master @regression @api › POST, PUT, DELETE - Product workflow @master @regression @api" classname="api\products.spec.ts" time="0.622">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
-</testcase>
-</testsuite>
-<testsuite name="api\users.spec.ts" timestamp="2026-11-01T06:50:14.781Z" hostname="chromium" tests="10" failures="0" skipped="0" time="4.16" errors="0">
-<testcase name="FakeStore Users API Tests › GET - All users @master @sanity @api" classname="api\users.spec.ts" time="0.337">
-</testcase>
-<testcase name="FakeStore Users API Tests › GET - User by ID @master @sanity @api" classname="api\users.spec.ts" time="0.346">
-</testcase>
-<testcase name="FakeStore Users API Tests › GET - Users with limit @master @regression @api" classname="api\users.spec.ts" time="0.333">
-</testcase>
-<testcase name="FakeStore Users API Tests › GET - Users sorted asc @master @regression @api" classname="api\users.spec.ts" time="0.329">
-</testcase>
-<testcase name="FakeStore Users API Tests › GET - Users sorted desc @master @regression @api" classname="api\users.spec.ts" time="0.336">
-</testcase>
-<testcase name="FakeStore Users API Tests › POST - Create user @master @regression @api" classname="api\users.spec.ts" time="0.392">
-</testcase>
-<testcase name="FakeStore Users API Tests › PUT - Update user @master @regression @api" classname="api\users.spec.ts" time="0.246">
-</testcase>
-<testcase name="FakeStore Users API Tests › DELETE - User @master @regression @api" classname="api\users.spec.ts" time="0.354">
-</testcase>
-<testcase name="FakeStore Users API Tests › GET - User response schema @master @regression @api" classname="api\users.spec.ts" time="0.561">
-</testcase>
-<testcase name="FakeStore Users API Tests › User CRUD workflow @master @regression @api › POST, PUT, DELETE - User workflow @master @regression @api" classname="api\users.spec.ts" time="0.926">
-<properties>
-<property name="serial" value="">
-</property>
-</properties>
+<testcase name="Invalid login (failure) row 5 @master @regression @datadriven @web" classname="web\opencart.spec.ts" time="4.104">
+<system-out>
+<![CDATA[✅ Data-driven login scenario completed: Invalid login.
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>
